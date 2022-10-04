@@ -22,3 +22,9 @@ if($employee1->checkAge()) {
 } else { 
     echo "Вік робітника не більше 18 років.<br><br>";
 }
+
+$rectangle1 = new Task5\Rectangle (20, 2.5);
+echo "Об'єкт класу Rectangle <br>";
+echo "width - " . $rectangle1->getWidth() . ", height - " . $rectangle1->getHeight() . "<br>";
+echo "Площа прямокутника - " . $rectangle1->getSquare() . "<br>";
+echo "Периметр прямокутника - " . $rectangle1->getPerimeter() . "<br>";
