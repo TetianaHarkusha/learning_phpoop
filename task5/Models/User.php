@@ -25,7 +25,11 @@ class User
     
     public function setAge(int $age): void
     {
-        $this->age = $age;
+        if ($age < 18) {
+            $this->age = $this->age;
+        } else {
+			$this->age = $age;
+		}
     }
 
 }
