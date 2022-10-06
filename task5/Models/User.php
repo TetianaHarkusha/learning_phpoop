@@ -4,6 +4,8 @@ namespace Task5;
 
 class User 
 {
+    const MIN_AGE = 18;
+	
     protected string $name;
     protected int $age;
 
@@ -25,11 +27,9 @@ class User
     
     public function setAge(int $age): void
     {
-        if ($age < 18) {
-            $this->age = $this->age;
-        } else {
-			$this->age = $age;
-		}
+        if ($age >= self::MIN_AGE) {
+            $this->age = $age;
+        } 
     }
 
 }
