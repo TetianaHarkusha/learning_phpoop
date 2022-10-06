@@ -1,7 +1,6 @@
 <?php
 spl_autoload_register(function (string $className) {
-
-    require_once __DIR__ . '\\' . $className . '.php';
+    require_once __DIR__ . '/' . str_replace('\\', '/', $className) . '.php';
 });
 
 $employee1 = new Models\Employees\Employee('John', 25, 1000);
