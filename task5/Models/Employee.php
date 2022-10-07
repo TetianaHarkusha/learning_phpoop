@@ -20,7 +20,7 @@ class Employee extends User
 
     public function checkAge(): bool
     {
-        return ($this->age > 18)? true: false;
+        return ($this->age > User::MIN_AGE)? true: false;
     }
 
     public function doubleSalary()
