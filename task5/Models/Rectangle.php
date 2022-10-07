@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace Task5;
 
 class Rectangle 
