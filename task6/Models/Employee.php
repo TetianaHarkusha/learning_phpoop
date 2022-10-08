@@ -5,9 +5,8 @@ namespace Task6;
 class Employee
 {
     const MIN_AGE = 1;
-	const MAX_AGE = 100;
-
-	private $name;
+    const MAX_AGE = 100;
+    private $name;
     private $age;
     private $salary;
 
