@@ -4,18 +4,18 @@ namespace Task6;
 
 class Employee
 {
-    const MIN_AGE = 1;
-    const MAX_AGE = 100;
-    private $name;
-    private $age;
-    private $salary;
-
-    public function __construct(string $name, int $age, float $salary)
-    {
-       $this->name = $name;
-       $this->age = $age;
-       $this->salary = $salary; 
-    }
+	const MIN_AGE = 1;
+	const MAX_AGE = 100;
+	private $name;
+	private $age;
+	private $salary;
+	
+	public function __construct(string $name, int $age, float $salary)
+	{
+		$this->name = $name;
+		$this->age = $age;
+		$this->salary = $salary;
+	}
 
 	public function __set($property, $value): void
 	{
