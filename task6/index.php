@@ -15,7 +15,11 @@ echo "$student2->name - " . ($student2->course ?? " закінчив навча�
 
 $employee1 = new Task6\Employee('Eric', 25, 1000);
 $employee2 = new Task6\Employee('Kyle', 30, 2000);
+$employee1->name = 'John';
+$employee1->age = 26;
+$employee1->salary = 1500;
+$employee1->setAge(100);
 echo "Об'єкти класу Employee <br>";
-echo "name - " . $employee1->name . ", age - " . $employee1->age .", salary - " . $employee1->salary . "<br>";
-echo "name - " . $employee2->name . ", age - " . $employee2->age .", salary - " . $employee2->salary . "<br>";
+echo "name - " . $employee1->name . ", age - " . $employee1->age .", salary - " . $employee1->getSalary() . "<br>";
+echo "name - " . $employee2->name . ", age - " . $employee2->age .", salary - " . $employee2->getSalary() . "<br>";
 echo  "Сума зарплат робітників: " . $employee1->salary + $employee2->salary;
