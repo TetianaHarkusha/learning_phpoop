@@ -23,9 +23,7 @@ class Student
 
     public function transferToNextCourse(): void
     {
-        if (self::isCourseCorrect(++$this->course)) {
-            $this->course;
-        } else {
+        if (!self::isCourseCorrect(++$this->course)) {
             unset($this->course);
         }
     }
