@@ -13,10 +13,6 @@ class Student
 	
 	public function __construct (string $name, int $course) 
 	{
-		// without using inCourseCorrect
-		/*if ($course < self::MIN_COURSE || $course > self::MAX_COURSE) {
-			throw new Exception('Невірне значення властивості course');
-		}*/
 		if (!self::isCourseCorrect($course)) {
 			throw new Exception('Невірне значення властивості course');
 		}
@@ -31,17 +27,6 @@ class Student
 		}
 	}
 	
-	/*
-	// without using inCourseCorrect
-	public function transferToNextCourse(): void
-	{
-		if ($this->course === self::MAX_COURSE) {
-			unset($this->course);
-		} else 	{
-			++$this->course;
-		}
-	}*/
-
 	public function transferToNextCourse(): void
 	{
 		if (!self::isCourseCorrect(++$this->course)) {
