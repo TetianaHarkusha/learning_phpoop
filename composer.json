@@ -1,9 +1,9 @@
-{ 
-   "autoload": {
-        "psr-4": {
-          "Task5\\":"Task5/Models/",
-		  "Task6\\":"Task6/Models/"
-        }
+{
+  "autoload": {
+    "psr-4": {
+      "Task5\\":"Task5/Models/",
+      "Task6\\":"Task6/Models/",
+      "Task8\\":"Task8/Models/"
     }
-   
+  }
 } 
