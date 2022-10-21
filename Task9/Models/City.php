@@ -3,14 +3,13 @@ declare(strict_types = 1);
 
 namespace Task9;
 
-use Exception;
-
 class City
 {
     private string $name;
     private string $foundation;
     private int $population;
 
+    //constructor method for a class
     public function __construct(string $name, string $foundation, int $population)
     {
         $this->name = $name;

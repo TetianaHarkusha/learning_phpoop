@@ -12,6 +12,12 @@ echo 'Середнє арифметичне чисел - ' . $arr->getAvg() . '<
 //created objects of class City
 $city = new Task9\City('Полтава', '899р', 280000);
 echo "Створено об'єкт класу City: <br>";
-echo 'місто - ' . $city->name . '<br>'; 
-echo 'дата заснування - ' . $city->foundation . '<br>';
-echo 'населення - ' . $city->population . '<br>';
+
+//created the array of properties
+$props = ['name', 'foundation', 'population'];
+
+//showing objects of class City in a screen 
+foreach($props as $prop)
+{
+    echo $prop . ' - ' . $city->$prop . '<br>';
+}
