@@ -1,10 +1,17 @@
 {
   "autoload": {
     "psr-4": {
-      "Task5\\":"Task5/Models/",
-      "Task6\\":"Task6/Models/",
-      "Task8\\":"Task8/Models/",
-      "Task9\\":"Task9/Models/"
+      "Task5\\": "Task5/Models/",
+      "Task6\\": "Task6/Models/",
+      "Task8\\": "Task8/Models/",
+      "Task9\\": "Task9/Models/",
+      "Task10\\": "Task10/Models/"
     }
+  },
+  "require": {
+    "friendsofphp/php-cs-fixer": "^3.12"
+  },
+  "scripts": {
+    "format": "./vendor/bin/php-cs-fixer fix Task10"
   }
-} 
+}
