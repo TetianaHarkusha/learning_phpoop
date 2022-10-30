@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Task10;
 
+//Class for working with arrays of numbers
 class Arr
 {
     private array $numbers = []; //array for numbers

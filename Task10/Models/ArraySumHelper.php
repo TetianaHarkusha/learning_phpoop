@@ -6,6 +6,7 @@ namespace Task10;
 
 use Exception;
 
+//The class with the set of methods for working with arrays
 class ArraySumHelper
 {
     /* Finds the sum of the first powers of the array elements: */
