@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Task11;
 
+//The class for information about people, parent class
 class User
 {
     protected string $name; //The property is available in child classes

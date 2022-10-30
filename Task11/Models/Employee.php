@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Task11;
 
-class Employee extends User // the child class from User
+//The class for working with employees, the child class from User
+class Employee extends User
 {
     private float $salary;
 

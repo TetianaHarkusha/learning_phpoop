@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Task11;
 
+//The class for working with students, the child class from User
 class Student extends User  // the child class from User
 {
     private int $course;

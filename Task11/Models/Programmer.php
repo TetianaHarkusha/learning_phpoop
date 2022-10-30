@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Task11;
 
-class Programmer extends Employee  // the child class from Employee
+//The class for working with programmers, the child class from Employee
+class Programmer extends Employee
 {
     private array $langs;
 

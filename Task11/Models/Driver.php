@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Task11;
 
-class Driver extends Employee // the child class from Employee
+//The class for working with drivers, the child class from Employee
+class Driver extends Employee
 {
     private int $experience;
     private string $cat;
