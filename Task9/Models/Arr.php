@@ -5,6 +5,7 @@ namespace Task9;
 
 use Exception;
 
+//Class for working with arrays of numbers
 class Arr
 {
     private array $numbers = []; //array for numbers

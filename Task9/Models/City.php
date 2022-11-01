@@ -3,6 +3,7 @@ declare(strict_types = 1);
 
 namespace Task9;
 
+//The class for working with information about cities
 class City
 {
     private string $name;
