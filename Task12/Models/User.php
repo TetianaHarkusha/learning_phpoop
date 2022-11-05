@@ -65,7 +65,7 @@ class User
     /**
      *  The method get for the property age
      *
-     * @return string
+     * @return int
      */
     public function getAge(): int
     {
