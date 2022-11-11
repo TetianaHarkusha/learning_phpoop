@@ -7,7 +7,8 @@
       "Task9\\": "Task9/Models/",
       "Task10\\": "Task10/Models/",
       "Task11\\": "Task11/Models/",
-      "Task12\\": "Task12/Models/"
+      "Task12\\": "Task12/Models/",
+      "Task13\\": "Task13/Models/"
 
     }
   },
@@ -15,6 +16,6 @@
     "friendsofphp/php-cs-fixer": "^3.12"
   },
   "scripts": {
-    "format": "./vendor/bin/php-cs-fixer fix Task12"
+    "format": "./vendor/bin/php-cs-fixer fix Task13"
   }
 }
