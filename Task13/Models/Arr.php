@@ -10,7 +10,7 @@ class Arr
     private array $nums = []; //the array of numbers
     private AvgHelper $helper; //the object of class AvgHelper
 
-    //constructor method for the class (created objects of classes SumHelper and AvgHelper)
+    //constructor method for the class (created objects of class AvgHelper)
     public function __construct()
     {
         $this->helper = new AvgHelper();

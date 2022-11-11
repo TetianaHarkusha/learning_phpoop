@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Task13;
 
-use Exception;
-use Task13\SumHelper;
-
 // The class with the set of methods for calculating the mean of array elements,
 // and also uses methods of class SumHelper (its parent class)
 class AvgHelper extends SumHelper
