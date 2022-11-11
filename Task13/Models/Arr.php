@@ -8,12 +8,12 @@ namespace Task13;
 class Arr
 {
     private array $nums = []; //the array of numbers
-    private SumHelper $sumHelper; //the object of class SumHelper
+    private AvgHelper $helper; //the object of class AvgHelper
 
-    //constructor method for the class (created objects of classes SumHelper)
+    //constructor method for the class (created objects of classes SumHelper and AvgHelper)
     public function __construct()
     {
-        $this->sumHelper = new SumHelper();
+        $this->helper = new AvgHelper();
     }
 
      /**
@@ -37,6 +37,18 @@ class Arr
      */
     public function getSum23(): float
     {
-        return $this->sumHelper->getSum2($this->nums) + $this->sumHelper->getSum3($this->nums);
+        $nums = $this->nums;
+        return $this->helper->getSum2($nums) + $this->helper->getSum3($nums);
+    }
+
+    /**
+     * Calculated sum of an arithmetic mean and a square mean of the array elements.
+     *
+     * @return float
+     */
+    public function getAvgMeanSum(): float
+    {
+        $nums = $this->nums;
+        return $this->helper->getAvg($nums) + $this->helper->getMeanSquare($nums);
     }
 }
