@@ -38,8 +38,7 @@ class UsersCollection
      */
     public function printEmployeesName(): void
     {
-        foreach ($this->arr as $user) 
-        {
+        foreach ($this->arr as $user) {
             if ($user instanceof Employee) {
                 echo $user->name . ' <br>';
             }
@@ -53,8 +52,7 @@ class UsersCollection
      */
     public function printStudentsName(): void
     {
-        foreach ($this->arr as $user) 
-        {
+        foreach ($this->arr as $user) {
             if ($user instanceof Student) {
                 echo $user->name . ' <br>';
             }
@@ -70,8 +68,7 @@ class UsersCollection
     {
         $total['salary'] = 0;
         $total['scholarship'] = 0;
-        foreach ($this->arr as $user) 
-        {
+        foreach ($this->arr as $user) {
             if ($user instanceof Employee) {
                 $total['salary'] += $user->salary;
             }

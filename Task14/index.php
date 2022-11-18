@@ -3,38 +3,31 @@
 require_once __DIR__ . '/../vendor/autoload.php'; //connect autoload
 
 use Task14\Employee;
-use Task14\EmployeesCollection;
-use Task14\Student;
-use Task14\UsersCollection;
+use Task14\ObjectsCollection;
+use Task14\User;
+use Task14\City;
 
-//created objects of class EmployeesCollection and added objects of class Employee to it
-$employeesCollection = new EmployeesCollection();
-$employeesCollection->add(new Employee('John', 2000));
-$employeesCollection->add(new Employee('John', 2000)); //didn't add
-$employee = new Employee('Robert', 3000);
-$employeesCollection->add($employee);
-$employeesCollection->add($employee); //didn't add
-echo "Створено об'єкт класу EmployeesCollection: <br>";
-print_r($employeesCollection->get());
+//created objects of class ObjectsCollection and added objects of class User, Employee and City to it
+$objectsCollection = new ObjectsCollection();
+$objectsCollection->add(new Employee('Bob', 'Dylan', 2500));
+$objectsCollection->add(new City('Poltava', 280000));
+$objectsCollection->add(new City('Kharkov', 1420000));
+$objectsCollection->add(new User('Sarah', 'Adams'));
+$objectsCollection->add(new User('Jack', 'Brooks'));
+$objectsCollection->add(new User('Maria', 'Day'));
+$objectsCollection->add(new Employee('Anna', 'Brown', 3000));
+$objectsCollection->add(new Employee('Edward', 'Smit', 2000));
+$objectsCollection->add(new City('Sumy', 260000));
+echo "Створено об'єкт класу ObjectsCollection: <br><br>";
+print_r($objectsCollection->get());
 
-//created objects of class UsersCollection and added objects of class Employee and Student to it
-$usersCollection = new UsersCollection();
-$usersCollection->add(new Employee('Bob', 2500));
-$usersCollection->add(new Student('Sarah', 400));
-$usersCollection->add(new Student('Jack', 450));
-$usersCollection->add(new Student('Maria', 450));
-$usersCollection->add(new Employee('Anna', 3000));
-$usersCollection->add(new Employee('Edward', 2000));
-echo "<br><br>Створено об'єкт класу UsersCollection: <br><br>";
-print_r($usersCollection->get());
-
-//used method class UsersCollection
-//printed names of employees
-echo '<br>Імена усіх працівників: <br>';
-$usersCollection->printEmployeesName();
-//printed names of students
-echo '<br>Імена усіх студентів: <br>';
-$usersCollection->printStudentsName();
-//printed the total salary for employees
-echo '<br>Загальна зарплата: ' . $usersCollection->calculateTotalSalaryAndScholarship()['salary'];
-echo '<br>Загальна стипендія: ' . $usersCollection->calculateTotalSalaryAndScholarship()['scholarship'];
+//used method class ObjectsCollection
+//printed objects names of class User or its children class
+echo "<br><br>Імена об'єктів класу User або нащадків цього класу: <br>";
+$objectsCollection->printUserNames();
+//printed objects names that are not in class User
+echo "<br>Імена об'єктів, які не належать до класу User або його нащадка: <br>";
+$objectsCollection->printNotUserNames();
+//printed objects names of class User and not its children class
+echo "<br>Імена об'єктів класу User без нащадків: <br>";
+$objectsCollection->printOnlyUserNames();
