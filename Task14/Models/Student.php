@@ -7,8 +7,8 @@ namespace Task14;
 //The class for information about students
 class Student
 {
-    public string $name;
-    public float $scholarship;
+    private string $name;
+    private float $scholarship;
 
     /**
      * The constructor method for the class
@@ -20,5 +20,25 @@ class Student
     {
         $this->name = $name;
         $this->scholarship = $scholarship;
+    }
+
+     /**
+     *  The method get for the property name
+     *
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     *  The method get for the property scholarship
+     *
+     * @return float
+     */
+    public function getScholarship(): float
+    {
+        return $this->scholarship;
     }
 }

@@ -7,75 +7,83 @@ namespace Task14;
 //The class for working with a collection of employees and students
 class UsersCollection
 {
-    private $arr = []; //the array of employees or students
+    private $employees = []; //the array of employees
+    private $students = []; //the array of students
 
     /**
-     * Adds an employee or student to the array (collection of employees or students).
+     * Adds an employee or student to the arrays.
      *
      * @param Employee|Student $user The object of class Employee or Student
+     * @return void
      */
-    public function add(Employee|Student $user)
+    public function add(Employee|Student $user): void
     {
-        if (!in_array($user, $this->arr)) {
-            $this->arr[] = $user;
+        if ($user instanceof Employee) {
+            if (!in_array($user, $this->employees)) {
+                $this->employees[] = $user;
+            }
+        }
+        if ($user instanceof Student) {
+            if (!in_array($user, $this->students)) {
+                $this->students[] = $user;
+            }
         }
     }
 
     /**
-     * Returns the array of employees or students
+     * Returns the array of objects of class Student
      *
      * @return array
      */
-    public function get(): array
+    public function getStudents(): array
     {
-        return $this->arr;
+        return $this->students;
     }
 
     /**
-     * Prints the names of employees
-     *
-     * @return void
-     */
-    public function printEmployeesName(): void
-    {
-        foreach ($this->arr as $user) {
-            if ($user instanceof Employee) {
-                echo $user->name . ' <br>';
-            }
-        }
-    }
-
-    /**
-     * Prints the names of students
-     *
-     * @return void
-     */
-    public function printStudentsName(): void
-    {
-        foreach ($this->arr as $user) {
-            if ($user instanceof Student) {
-                echo $user->name . ' <br>';
-            }
-        }
-    }
-
-    /**
-     * Calculates the total salary of employees add the total scholarship of students
+     * Returns the array of objects of class Employee
      *
      * @return array
      */
-    public function calculateTotalSalaryAndScholarship(): array
+    public function getEmployees(): array
     {
-        $total['salary'] = 0;
-        $total['scholarship'] = 0;
-        foreach ($this->arr as $user) {
-            if ($user instanceof Employee) {
-                $total['salary'] += $user->salary;
-            }
-            if ($user instanceof Student) {
-                $total['scholarship'] += $user->scholarship;
-            }
+        return $this->employees;
+    }
+
+    /**
+     * Calculates the total salary of employees
+     *
+     * @return float
+     */
+    public function getTotalSalary(): float
+    {
+        $sum = 0;
+        foreach ($this->employees as $user) {
+            $sum += $user->getSalary();
         }
-        return $total;
+        return $sum;
+    }
+
+    /**
+     * Calculates the total scholarship of students
+     *
+     * @return float
+     */
+    public function getTotalScholarship(): float
+    {
+        $sum = 0;
+        foreach ($this->students as $user) {
+            $sum += $user->getScholarship();
+        }
+        return $sum;
+    }
+    /**
+     * Calculates the total payment for employees and students
+     *
+     * @return float
+     */
+    public function getTotalPayment(): float
+    {
+        return $this->getTotalScholarship() + $this->getTotalSalary();
     }
 }
