@@ -16,7 +16,7 @@ class EmployeesCollection
      */
     public function add(Employee $employee)
     {
-        if (!$this->exists($employee)) {
+        if (!in_array($employee, $this->employees)) {
             $this->employees[] = $employee;
         }
     }
@@ -29,21 +29,5 @@ class EmployeesCollection
     public function get(): array
     {
         return $this->employees;
-    }
-
-    /**
-     * Checks that the new object of class Employee is contained in the collection of employees
-     *
-     * @param Employee $newEmployee  The object of class Employee
-     * @return bool
-     */
-    private function exists(Employee $newEmployee): bool
-    {
-        foreach ($this->employees as $emp) {
-            if ($emp == $newEmployee) {
-                return true;
-            }
-        }
-        return false;
     }
 }
