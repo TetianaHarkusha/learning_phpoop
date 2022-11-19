@@ -5,6 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php'; //connect autoload
 use Task15\Post;
 use Task15\Employee;
 use Task15\Num;
+use Task15\Geometry;
 
 //created objects of class Post
 $post1 = new Post('programmer', 2500);
@@ -24,4 +25,10 @@ echo $employee1->getName() . ' ' . $employee1->getSurname() . ' - ';
 echo $employee1->getPost()->getName() . ', ' . $employee1->getPost()->getSalary() . '<br><br>';
 
 //printed static properties or methods of class Num
-echo 'The sum of static property values of class Num: ' . Num::getSum();
+echo 'The sum of static property values of class Num: ' . Num::getSum() . '<br><br>';
+
+//printed static properties or methods of class Geometry
+$radius = 10;
+echo 'The the area of a circle with radius ' . $radius . ' : ' . Geometry::getCircleSquare($radius) .'<br>';
+echo 'The the circumference of a circle with radius ' . $radius . ' : ' . Geometry::getCircleСircuit($radius) .'<br>';
+echo 'The the volume of a sphere with radius ' . $radius . ' : ' . Geometry::getSphereVolume($radius) .'<br>';
