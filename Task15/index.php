@@ -4,6 +4,7 @@ require_once __DIR__ . '/../vendor/autoload.php'; //connect autoload
 
 use Task15\Post;
 use Task15\Employee;
+use Task15\Num;
 
 //created objects of class Post
 $post1 = new Post('programmer', 2500);
@@ -21,3 +22,6 @@ $employee1->changePost($post3);
 echo '<br>Employees after changes: <br>';
 echo $employee1->getName() . ' ' . $employee1->getSurname() . ' - ';
 echo $employee1->getPost()->getName() . ', ' . $employee1->getPost()->getSalary() . '<br>';
+
+//printed static properties of class Num
+echo '<br>The sum of static property values of class Num: ' . Num::$num1 + Num::$num2;
