@@ -6,6 +6,7 @@ use Task15\Post;
 use Task15\Employee;
 use Task15\Num;
 use Task15\Geometry;
+use Task15\ArraySumHelper;
 
 //created objects of class Post
 $post1 = new Post('programmer', 2500);
@@ -32,3 +33,9 @@ $radius = 10;
 echo 'The the area of a circle with radius ' . $radius . ' : ' . Geometry::getCircleSquare($radius) .'<br>';
 echo 'The the circumference of a circle with radius ' . $radius . ' : ' . Geometry::getCircleСircuit($radius) .'<br>';
 echo 'The the volume of a sphere with radius ' . $radius . ' : ' . Geometry::getSphereVolume($radius) .'<br>';
+
+//printed static methods of class ArraySumHelper
+//The class as a set of methods
+$arraySumHelper = new ArraySumHelper();
+$arr = [1, 2, 3, 4];
+echo '<br>The sum of the second powers of the elements of the array: ' . ArraySumHelper::getSum2($arr);
