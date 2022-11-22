@@ -39,6 +39,6 @@ class Geometry
      */
     public static function getSphereVolume(float $radius): float
     {
-        return 4 / 3 * self::$pi * pow($radius, 3);
+        return round(4 / 3 * self::$pi * pow($radius, 3), 2);
     }
 }
