@@ -11,10 +11,9 @@
       "Task13\\": "Task13/Models/",
       "Task14\\": "Task14/Models/",
       "Task15\\": "Task15/Models/"
-
     }
   },
-  "require": {
+  "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.12"
   },
   "scripts": {
