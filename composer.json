@@ -10,7 +10,8 @@
       "Task12\\": "Task12/Models/",
       "Task13\\": "Task13/Models/",
       "Task14\\": "Task14/Models/",
-      "Task15\\": "Task15/Models/"
+      "Task15\\": "Task15/Models/",
+      "Task16\\": "Task15/Models/"
     }
   },
   "require-dev": {
