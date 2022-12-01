@@ -8,7 +8,7 @@ namespace Task16;
 class User
 {
     private string $name;
-    public static int $count = 0;
+    private static int $count = 0;
 
     /**
      * The construct method for the class,
@@ -36,5 +36,15 @@ class User
     public function getName(): string
     {
         return $this->name;
+    }
+
+    /**
+     *  The static method get for the property count
+     *
+     * @return int
+     */
+    public static function getCount(): int
+    {
+        return self::$count;
     }
 }
