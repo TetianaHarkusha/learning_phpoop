@@ -31,7 +31,7 @@ class Quadrate extends Figure
 
 
     /**
-     * The method method calculates a square of a quadrate
+     * The method calculates a square of a quadrate
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class Quadrate extends Figure
     }
 
     /**
-     * The method method calculates a perimeter of perimeter
+     * The method calculates a perimeter of perimeter
      *
      * @return void
      */
