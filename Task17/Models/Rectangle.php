@@ -43,7 +43,7 @@ class Rectangle extends Figure
     }
 
     /**
-     * The method method calculates a square of a rectangle
+     * The method calculates a square of a rectangle
      *
      * @return void
      */
@@ -53,7 +53,7 @@ class Rectangle extends Figure
     }
 
     /**
-     * The method method calculates a perimeter of a rectangle
+     * The method calculates a perimeter of a rectangle
      *
      * @return void
      */
