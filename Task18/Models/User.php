@@ -11,6 +11,18 @@ class User implements iUser
     public int $age;
 
     /**
+     * The construct method for the class
+     *
+     * @param string $name
+     * @param int $age
+     */
+    public function __construct(string $name, int $age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    /**
      *  The method get for the property name
      *
      * @return string
@@ -21,17 +33,6 @@ class User implements iUser
     }
 
     /**
-     * The method set for the property name
-     *
-     * @param string $name
-     * @return void
-     */
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
-    /**
      *  The method get for the property age
      *
      * @return int
@@ -39,16 +40,5 @@ class User implements iUser
     public function getAge(): int
     {
         return $this->age;
-    }
-
-    /**
-     * The method set for the property age
-     *
-     * @param int $age
-     * @return void
-     */
-    public function setAge($age): void
-    {
-        $this->age = $age;
     }
 }
