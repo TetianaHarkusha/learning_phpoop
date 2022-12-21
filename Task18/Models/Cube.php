@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Task18;
 
 //The class for working of cubes
-class Cube implements iCube
+class Cube implements iFigure3d
 {
     private float $a; // a side of a cube
 
@@ -34,7 +34,7 @@ class Cube implements iCube
      *
      * @return float
      */
-    public function getSquareSurface(): float
+    public function getSurfaceSquare(): float
     {
         return 6 * pow($this->a, 2);
     }

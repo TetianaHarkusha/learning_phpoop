@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Task18;
 
 //The class for working of quadrates
-class Quadrate implements Figure
+class Quadrate implements iFigure
 {
     private float $a; // a side of a quadrate
 
