@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Task18;
 
 //The class for working of rectangles, child class
-class Rectangle implements iFigure
+class Rectangle implements iFigure, iTetragon
 {
     private float $a; // a width of a rectangle
     private float $b; // a length of a rectangle
@@ -23,21 +23,41 @@ class Rectangle implements iFigure
     }
 
     /**
-     *  The method get for the property width
+     *  The method get the first side
      *
      * @return float
      */
-    public function getWidth(): float
+    public function getA(): float
     {
         return $this->a;
     }
 
     /**
-     *  The method get for the property length
+     *  The method get the second side
      *
      * @return float
      */
-    public function getLength(): float
+    public function getB(): float
+    {
+        return $this->b;
+    }
+
+    /**
+     *  The method get the third side
+     *
+     * @return float
+     */
+    public function getC(): float
+    {
+        return $this->a;
+    }
+
+    /**
+     *  The method get the fourth side
+     *
+     * @return float
+     */
+    public function getD(): float
     {
         return $this->b;
     }
