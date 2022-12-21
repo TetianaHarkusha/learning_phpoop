@@ -4,10 +4,33 @@ declare(strict_types=1);
 
 namespace Task18;
 
-//The class for information about employee, children class
-class Employee extends User implements iEmployee
+//The class for information about employees
+class Employee
 {
+    private string $name;
     private float $salary;
+
+    /**
+     * The construct method for the class
+     *
+     * @param string $name
+     * @param float $salary
+     */
+    public function __construct(string $name, float $salary)
+    {
+        $this->name = $name;
+        $this->salary = $salary;
+    }
+
+    /**
+     *  The method get for the property name
+     *
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
 
     /**
      *  The method get for the property salary
@@ -17,16 +40,5 @@ class Employee extends User implements iEmployee
     public function getSalary(): float
     {
         return $this->salary;
-    }
-
-    /**
-     * The method set for the property salary
-     *
-     * @param float $salary
-     * @return void
-     */
-    public function setSalary(float $salary): void
-    {
-        $this->salary = $salary;
     }
 }
