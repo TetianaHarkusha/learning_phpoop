@@ -2,11 +2,12 @@
 
 require_once __DIR__ . '/../vendor/autoload.php'; //connect autoload
 
-use Task18\Rectangle;
+use Task18\Disk;
 
-//created objects of classes Rectangle which implements two interfaces
-$rectangle = new Rectangle(4, 3);
-echo "Створено прямокутник зі сторонами: " . $rectangle->getA() . ', ' ;
-echo $rectangle->getB() . ', ' . $rectangle->getC() . ', ' . $rectangle->getD() . "\n";
+//created objects of classes Disk which implements two interfaces
+$rectangle = new Disk(5);
+echo "Створено коло.\n";
+echo "радіус: " . $rectangle->getRadius() . "\n" ;
+echo "діаметр: " . $rectangle->getDiameter() . "\n" ;
 echo "площа: " . $rectangle->getSquare() . "\n" ;
 echo "периметер: " . $rectangle->getPerimeter() . "\n" ;

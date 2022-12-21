@@ -2,7 +2,7 @@
 
 namespace Task18;
 
-//This interface declares the methods required for classes of geometric shapes
+//This interface declares the methods required for classes of geometric figures
 interface iFigure
 {
     public const PI = 3.14;

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Task18;
 
 //The class for working of disks
-class Disk implements Figure
+class Disk implements iFigure, iCircle
 {
     private float $a; // a radius of a disk
 
@@ -30,13 +30,23 @@ class Disk implements Figure
     }
 
     /**
+     *  The method gets the diameter of a disk
+     *
+     * @return float
+     */
+    public function getDiameter(): float
+    {
+        return 2 * $this->a;
+    }
+
+    /**
      * The method calculates a square of a disk
      *
      * @return float
      */
     public function getSquare(): float
     {
-        return round(Figure::PI * pow($this->a, 2), 2);
+        return round(iFigure::PI * pow($this->a, 2), 2);
     }
 
     /**
@@ -46,6 +56,6 @@ class Disk implements Figure
      */
     public function getPerimeter(): float
     {
-        return round(2 * Figure::PI * $this->a, 2);
+        return round(2 * iFigure::PI * $this->a, 2);
     }
 }
