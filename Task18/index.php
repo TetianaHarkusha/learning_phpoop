@@ -2,15 +2,11 @@
 
 require_once __DIR__ . '/../vendor/autoload.php'; //connect autoload
 
-use Task18\Programmer;
+use Task18\Sphere;
 
-//created objects of classes Programmer
-$prog1 = new Programmer('John', 2500);
-$prog1->addLang('PHP');
-$prog1->addLang('SQL');
-$prog1->addLang('Python');
-echo "Створено об'єкт класу Programmer.\n";
-echo "ім'я: " . $prog1->getName() . "\n" ;
-echo "зарплата: " . $prog1->getSalary() . "\n" ;
-echo "список мов: ";
-print_r($prog1->getLangs());
+//created objects of classes Sphere
+$sphere1 = new Sphere(4);
+echo "Створено об'єкт класу Sphere.\n";
+echo "радіус: " . $sphere1->radius . "\n" ;
+echo "об'єм: " . $sphere1->getVolume() . "\n" ;
+echo "площа поверхні: " . $sphere1->getSquare();
