@@ -15,4 +15,3 @@ echo "населення: " . $country1->getPopulation();
 //created objects of classes Test
 $test1 = new Test();
 echo "\n\nСтворено об'єкт класу Test\n";
-echo 'getSum: ' . $test1->getSum();
