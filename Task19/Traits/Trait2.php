@@ -10,7 +10,7 @@ trait Trait2
      *
      * @return int
      */
-    private function method2(): int
+    private function method(): int
     {
         return 2;
     }
