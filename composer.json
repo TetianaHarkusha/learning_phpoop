@@ -13,13 +13,14 @@
       "Task15\\": "Task15/Models/",
       "Task16\\": "Task16/Models/",
       "Task17\\": "Task17/Models/",
-      "Task18\\": ["Task18/Models/", "Task18/Interfaces/", "Task18/Views/"]
+      "Task18\\": ["Task18/Models/", "Task18/Interfaces/", "Task18/Views/"],
+      "Task19\\": ["Task19/Models/", "Task19/Traits/"]
     }
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.12"
   },
   "scripts": {
-    "format": "./vendor/bin/php-cs-fixer fix Task18"
+    "format": "./vendor/bin/php-cs-fixer fix Task19"
   }
 }
