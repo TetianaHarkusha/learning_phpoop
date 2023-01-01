@@ -5,13 +5,15 @@ namespace Task19;
 // The test trait
 trait Trait2
 {
+    use Trait1;
+
     /**
      *  The test method
      *
      * @return int
      */
-    private function method(): int
+    private function method3(): int
     {
-        return 2;
+        return 3;
     }
 }

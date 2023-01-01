@@ -10,8 +10,18 @@ trait Trait1
      *
      * @return int
      */
-    private function method(): int
+    private function method1(): int
     {
         return 1;
+    }
+
+    /**
+     *  The test method
+     *
+     * @return int
+     */
+    private function method2(): int
+    {
+        return 2;
     }
 }
