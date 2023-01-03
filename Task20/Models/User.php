@@ -12,16 +12,30 @@ class User
     private string $name;
     private int $age;
 
-    /**
-     * The construct method for the class,
-     *
-     * @param string $name
-     * @param int $age
-     */
-    public function __construct(string $name, int $age)
+    public const MIN_AGE = 0;
+    public const MAX_AGE = 70;
+
+    // The magic method set for the class
+    public function __set($property, $value)
     {
-        $this->name = $name;
-        $this->age = $age;
+        switch ($property) {
+            case 'name':
+                if (!empty($value)) {
+                    $this->$property = $value;
+                } else {
+                    throw new Exception('The name must have meaning');
+                }
+                break;
+            case 'age':
+                if ($value >= self::MIN_AGE and $value <= self::MAX_AGE) {
+                    $this->$property = $value;
+                } else {
+                    throw new Exception('The invalid value for age');
+                }
+                break;
+            default:
+                throw new Exception('The property does not exist');
+        }
     }
 
     /**
