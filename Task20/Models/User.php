@@ -4,35 +4,37 @@ declare(strict_types=1);
 
 namespace Task20;
 
+use Exception;
+
 //the class for working with users
 class User
 {
     private string $name;
-    private string $surname;
-    private string $patronymic;
+    private int $age;
 
     /**
      * The construct method for the class,
      *
      * @param string $name
-     * @param string $surname
-     * @param string $patronymic
+     * @param int $age
      */
-    public function __construct(string $name, string $surname, string $patronymic)
+    public function __construct(string $name, int $age)
     {
         $this->name = $name;
-        $this->surname = $surname;
-        $this->patronymic = $patronymic;
+        $this->age = $age;
     }
-    
+
     /**
-     * The magic method for the class,
-     * to decide how it will react when it is treated like a string
+     * The magic method get for the class
      *
-     * @return string
+     * @return
      */
-    public function __toString(): string
+    public function __get($property)
     {
-        return ucwords($this->surname . ' ' . mb_substr($this->name, 0, 1) . '.' . mb_substr($this->patronymic, 0, 1) . '.');
+        if (in_array($property, ['name', 'age'])) {
+            return $this->$property;
+        } else {
+            throw new Exception('This property is undefined.');
+        }
     }
 }
