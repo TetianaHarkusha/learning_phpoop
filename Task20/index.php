@@ -2,11 +2,15 @@
 
 require_once __DIR__ . '/../vendor/autoload.php'; //connect autoload'
 
-use Task20\User;
-use Task20\Arr;
+use Task20\Date;
 
-//created objects of classes User
-$user1 = new User('Іван', 25);
-echo "Створено об'єкт класу User.\n";
-echo 'name: ' . $user1->name;
-echo "\nage: " . $user1->age;
+//created objects of classes Date
+$date= new Date();
+$date->day = 5;
+$date->month = 2;
+$date->year = 2023;
+echo "Створено об'єкт класу Date.\n";
+echo 'year: ' . $date->year . "\n";
+echo 'month: ' . $date->month . "\n";
+echo 'day: ' . $date->day ."\n";
+echo 'weekDay: ' . $date->weekDay;
