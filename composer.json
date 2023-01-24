@@ -23,5 +23,5 @@
   },
   "scripts": {
     "format": "./vendor/bin/php-cs-fixer fix Task20"
-  }
+ }
 }
